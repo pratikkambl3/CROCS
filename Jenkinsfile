@@ -1,7 +1,9 @@
 pipeline {
     agent {
   label 'blue'
-        
+        }
+    environment{
+        JAVA_HOME = '/home/grras/slavedir/jdk-11.0.23'
     }
 
 
