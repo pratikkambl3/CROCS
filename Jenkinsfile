@@ -5,6 +5,9 @@ pipeline {
     environment{
         JAVA_HOME = '/home/grras/slavedir/jdk-11.0.23'
     }
+triggers {
+  pollSCM '* * * * *'
+}
 
 
     stages {
