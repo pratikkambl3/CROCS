@@ -26,5 +26,10 @@ triggers {
                 sh 'cp target/CROCS.war /home/grras/slavedir/apache-tomcat-9.0.93/webapps'
             }
         }
+        stage('Notification'){
+            steps{
+                slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '# crocs', color: 'good', message: 'Welcome To jenkins slack world ', teamDomain: 'DEVOPS', tokenCredentialId: 'SlackNotify'
+            }
+        }
     }
 }
